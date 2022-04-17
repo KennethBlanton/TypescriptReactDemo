@@ -74,8 +74,8 @@ const styles = StyleSheet.create({
         width: '49%',
         backgroundColor: 'rgba(99,99,102, 0.5)',
         marginBottom: 15,
-        paddingLeft: 10,
-        paddingRight: 10,
+        paddingLeft: 5,
+        paddingRight: 5,
         borderRadius: 5,
     },
     priorityContainer: {
