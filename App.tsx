@@ -48,15 +48,15 @@ const App : React.FC = () => {
   // issue with stack.navigator jsx component. cause: issue with dependancy version possibly issue with windows. 
   return (
     <AppCtx.Provider value={{items: todoList, read:appContext.read, setTodoList: updateTodos, save:appContext.save }}>
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Start" component={Start} />
-        <Stack.Screen name="NewTicket" component={NewTicket} />
-        <Stack.Screen name="InProgress" component={InProgress} />
-        <Stack.Screen name="Done" component={Done} />
-      </Stack.Navigator>
-    </NavigationContainer>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Start" component={Start} />
+          <Stack.Screen name="NewTicket" component={NewTicket} />
+          <Stack.Screen name="InProgress" component={InProgress} />
+          <Stack.Screen name="Done" component={Done} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </AppCtx.Provider>
   );
 }

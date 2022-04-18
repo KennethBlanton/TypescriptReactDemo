@@ -39,12 +39,15 @@ const TodoCard : React.FC <TodoCardProps> = ({item}) => {
             }
         });
     }
+
     const onShortPress = () => {
         setSelected(true)
     }
+
     const closeModal = () => {
         setModalVisible(false)
     }
+    
     return (
         <View>
             <TouchableOpacity onPress={onShortPress} onLongPress={onLongPress}>

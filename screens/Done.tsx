@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import TodoList from '../components/TodoList';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from '../App';

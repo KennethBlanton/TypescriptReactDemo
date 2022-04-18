@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import { Keyboard, Pressable } from 'react-native';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, TouchableWithoutFeedback } from 'react-native';
-
+import { Keyboard} from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableWithoutFeedback } from 'react-native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from '../App';
 import {RouteProp} from '@react-navigation/core';

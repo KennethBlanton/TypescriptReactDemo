@@ -1,6 +1,6 @@
 import React from 'react';
 import TodoCard from './TodoCard';
-import { StyleSheet, Text, View, FlatList, Pressable, GestureResponderEvent } from 'react-native';
+import { StyleSheet, Text, View, FlatList } from 'react-native';
 import {TodoCardInterface} from '../models/todo.model';
 import {AppCtx} from '../contexts';
 
@@ -13,7 +13,7 @@ const TodoList : React.FC<TodoListProps> = (props) => {
     const appContext = React.useContext(AppCtx);
     if(!props.items?.length) return (<Text>No Cards</Text>)
     const renderItem = ({item} : {item: TodoCardInterface}) => {
-        if(item.column !== props.index) return <View></View>
+        if(item.column !== props.index) return <></>
         return (
             <TodoCard item={item} />
         )

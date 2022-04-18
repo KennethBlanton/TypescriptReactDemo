@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, TouchableWithoutFeedback } from 'react-native';
-import {PRIORITIES, TIME_VAL_ARR} from '../constants';
+import React from 'react';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import {PRIORITIES} from '../constants';
 interface PrioritiesListProps {
     setPriority: React.Dispatch<React.SetStateAction<number>>,
     priority: number,
@@ -16,15 +16,16 @@ const PrioritiesList : React.FC<PrioritiesListProps> = (props) => {
                     highlight = styles.priorityContainerInnerHighlight;
                 }
                 return (
-                <TouchableOpacity 
-                    style={highlight} 
-                    onPress={() => {props.setPriority(key)}}
-                >
-                    <View style={colors[key]}></View>
-                    <Text style={styles.button}>
-                        <Text style={styles.buttonText}>{value.toString()}</Text>
-                    </Text>
-                </TouchableOpacity>
+                    <TouchableOpacity 
+                        style={highlight} 
+                        onPress={() => {props.setPriority(key)}}
+                        key={key}
+                    >
+                        <View style={colors[key]}></View>
+                        <Text style={styles.button}>
+                            <Text style={styles.buttonText}>{value.toString()}</Text>
+                        </Text>
+                    </TouchableOpacity>
                 )
             })}
         </View>
